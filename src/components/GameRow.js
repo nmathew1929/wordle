@@ -5,12 +5,14 @@ import './GameRow.css'
 
 function GameRow(props) {
     const [letterArr, setLetterArr] = useState([]);
+    const [accepted, setAccepted] = useState(false);
 
     const checkIfFull = () => {
         if(letterArr.length < 5) {
             console.log("Not filled yet.")
         } else {
             console.log("Filled.")
+            setAccepted(true);
             console.log(props.wordle)
             if(props.wordle === letterArr.join("")) {
                 console.log("word found");
@@ -39,12 +41,12 @@ function GameRow(props) {
 
     return (
         <React.Fragment>
-            <div className="row-container" onKeyDown={props.focus ? getKeyboardInput: undefined} tabIndex="0">
-                <GridTile  wordle={props.wordle} letter={letterArr[0]} index={0}></GridTile>
-                <GridTile  wordle={props.wordle} letter={letterArr[1]} index={1}></GridTile>
-                <GridTile  wordle={props.wordle} letter={letterArr[2]} index={2}></GridTile>
-                <GridTile  wordle={props.wordle} letter={letterArr[3]} index={3}></GridTile>
-                <GridTile  wordle={props.wordle} letter={letterArr[4]} index={4}></GridTile>
+            <div className={accepted ? "row-container fade":"row-container"} onKeyDown={props.focus ? getKeyboardInput: undefined} tabIndex="0">
+                <GridTile  isAccepted={accepted} wordle={props.wordle} letter={letterArr[0]} index={0}></GridTile>
+                <GridTile  isAccepted={accepted} wordle={props.wordle} letter={letterArr[1]} index={1}></GridTile>
+                <GridTile  isAccepted={accepted} wordle={props.wordle} letter={letterArr[2]} index={2}></GridTile>
+                <GridTile  isAccepted={accepted} wordle={props.wordle} letter={letterArr[3]} index={3}></GridTile>
+                <GridTile  isAccepted={accepted} wordle={props.wordle} letter={letterArr[4]} index={4}></GridTile>
             </div>
         </React.Fragment>
     );

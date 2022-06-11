@@ -8,7 +8,7 @@ const GridTile = (props) => {
     return (
         <React.Fragment>
             <div className="tile-item">
-                <div className={applyTileStyle(props.wordle, props.letter, props.index)}>{props.letter}</div>
+                <div className={applyTileStyle(props.wordle, props.letter, props.index, props.isAccepted)}>{props.letter}</div>
             </div>
         </React.Fragment>
     );

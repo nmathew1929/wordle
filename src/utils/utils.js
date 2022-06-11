@@ -3,9 +3,16 @@ export function  letterCheck(letter) {
     return letter.length === 1 && /[a-zA-Z]/g.test(letter);
 }
 
-export function applyTileStyle(wordle, input, index) {
-    console.log(input);
+export function applyTileStyle(wordle, input, index, isAccepted) {
+    // console.log(input);
     let returnValue = "tile-empty";
+    
+    if(!isAccepted && !input)  {
+        return "tile-empty"
+    } else if(input && !isAccepted) {
+        return  "tile-occupied"
+    }
+
     if(!input) {
         returnValue = "tile-empty";
     } else if(wordle.indexOf(input) > -1) {

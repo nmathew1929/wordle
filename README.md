@@ -1,6 +1,10 @@
 # wordle
-wordle made with js
+
+wordle made with functional react
 
 ## TODO
-- figure out tile padding
-- enable user input
+
+- make it responsive for mobile
+- add game directions
+- make a header
+- apply styles after enter (bug)

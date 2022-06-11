@@ -1,19 +1,45 @@
-div {
+.tile-item div {
     margin: 4px;
+    line-height: 1em;
 }
 
 .tile-occupied {
     background: rgb(250, 250, 250);
     color: black;
-    font-size: 25px;
+    font-size: 2em;
     border: 1px solid black;
     padding: 5px;
+    text-align: center;
+    vertical-align: middle;
 }
 
-
 .tile-empty {
-    padding: 12px;
+    padding: 1.5em;
     border: 1px solid grey;
 }
 
+.tile-item {
+    justify-content: stretch;
+    flex: 1;
+}
 
+
+.tile-correct {
+    color: white;
+    background: rgb(19, 125, 22);
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.not-in-position {
+    color:black;
+    background: rgb(209, 168, 55);
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}

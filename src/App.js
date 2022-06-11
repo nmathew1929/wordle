@@ -1,5 +1,6 @@
 import Heading from './components/Heading'
 import Grid from './components/Grid'
+import './App.css'
 import React from 'react';
 
 function App() {

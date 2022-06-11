@@ -1,0 +1,19 @@
+div {
+    margin: 4px;
+}
+
+.tile-occupied {
+    background: rgb(250, 250, 250);
+    color: black;
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+.tile-empty {
+    padding: 12px;
+    border: 1px solid grey;
+}
+
+

@@ -5,7 +5,7 @@ function Grid() {
     return (
         <div id="board-container">
             <div id="row">
-                <GameRow></GameRow>            
+                <GameRow focused={true}></GameRow>            
                 <GameRow></GameRow>            
                 <GameRow></GameRow>            
                 <GameRow></GameRow>            

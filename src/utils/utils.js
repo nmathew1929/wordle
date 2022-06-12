@@ -36,8 +36,13 @@ function locations(substring,string){
 function isInSameIndex(substring, string, index) {
     let arr = locations(substring, string);
     for(let i=0; i<arr.length; i++) {
-        if(arr[i] == index) 
+        if(arr[i] === index) 
             return true;
     }
     return false;
+}
+
+export function getWordleWord() {
+    const wordList = require('./wordlist.json')
+    return wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
 }

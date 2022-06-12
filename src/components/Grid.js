@@ -1,18 +1,21 @@
 import { useState } from 'react'
-import GameRow from './GameRow'
+import GridRow from './GridRow'
 import './Grid.css'
+import { GlobalState, useGlobalState } from '../GlobalContext';
 
 function Grid() {
-    const [focusedArr, setFocusedArr] = useState([true, false, false, false, false])
-    const wordle = 'NINJA';
+    const [focusedArr, setFocusedArr] = useState([true, false, false, false, false, false])
+    const [globalState] = useGlobalState();
+    console.log(globalState) //wordle word
     return (
         <div id="board-container">
-            <div id="row">
-                <GameRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {wordle} focus={focusedArr[0]}></GameRow>            
-                <GameRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {wordle} focus={focusedArr[1]}></GameRow>            
-                <GameRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {wordle} focus={focusedArr[2]}></GameRow>            
-                <GameRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {wordle} focus={focusedArr[3]}></GameRow>            
-                <GameRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {wordle} focus={focusedArr[4]}></GameRow>            
+            <div id="board">
+                <GridRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {globalState} focus={focusedArr[0]}></GridRow>            
+                <GridRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {globalState} focus={focusedArr[1]}></GridRow>            
+                <GridRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {globalState} focus={focusedArr[2]}></GridRow>            
+                <GridRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {globalState} focus={focusedArr[3]}></GridRow>            
+                <GridRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {globalState} focus={focusedArr[4]}></GridRow>            
+                <GridRow focusedArr = {focusedArr} onChange = {value => setFocusedArr(value)} wordle = {globalState} focus={focusedArr[5]}></GridRow>            
             </div>
         </div>
     );

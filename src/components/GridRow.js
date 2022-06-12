@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import GridTile from './GridTile'
 import {letterCheck} from '../utils/utils.js';
-import './GameRow.css'
+import './GridRow.css'
 
-function GameRow(props) {
+function GridRow(props) {
     const [letterArr, setLetterArr] = useState([]);
     const [accepted, setAccepted] = useState(false);
 
@@ -54,4 +54,4 @@ function GameRow(props) {
 }
 
 
-export default GameRow;
+export default GridRow;

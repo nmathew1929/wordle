@@ -1,10 +1,10 @@
 # wordle
 
-wordle made with functional react
+wordle clone made with functional react
 
 ## TODO
 
 - make it responsive for mobile
+- add styling fo better user experience.
 - add game directions
-- make a header
-- apply styles after enter (bug)
+- refactor components to use global context more.
